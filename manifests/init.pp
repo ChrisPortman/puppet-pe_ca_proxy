@@ -2,7 +2,7 @@ class pe_ca_proxy (
   $proxy_target,
 ){
 
-  puppet_enterprise::trapperkeeper::bootstrap_cfg { 'certificate-authority-service' :
+  puppet_enterprise::trapperkeeper::bootstrap_cfg { 'certificate-authority-service-reverse-proxy' :
     container => 'puppetserver',
     namespace => 'puppetlabs.enterprise.services.reverse-proxy.reverse-proxy-ca-service',
     service   => 'reverse-proxy-ca-service',
