@@ -1,0 +1,10 @@
+certificate-authority: {
+    proxy-config: {
+    proxy-target-url: "https://<%= @proxt_target %>:8140/"
+        ssl-opts: {
+        ssl-cert: "/etc/puppetlabs/puppet/ssl/certs/<%= @clientcert %>.pem"
+            ssl-key: "/etc/puppetlabs/puppet/ssl/private_keys/<%= @clientcert %>.pem"
+            ssl-ca-cert: "/etc/puppetlabs/puppet/ssl/certs/ca.pem"
+        }
+    }
+}
