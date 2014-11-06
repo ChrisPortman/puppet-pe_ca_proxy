@@ -2,7 +2,7 @@
 
 This module is a stop-gap solution for setting up CA proxying in PE
 3.7.0 until full support is added to a future release. The PuppetServer
-project already has proper support, this simply actiavtes it.
+project already has proper support, this simply activates it.
 
 ## Usage
 
@@ -14,3 +14,11 @@ The best suggested usage is to create a new group in the PE Node
 Classifier called "PE Certificate Authority Proxy", add the
 `pe_ca_proxy` class to it, and set the `proxy_target` parameter. Then
 pin the "compile only" (or spoke) masters to this group.
+
+## PE Versions Supported
+
+For the current term, this module will be considered applicable to
+PE 3.7.0 only. It's use should be ceased during an upgrade to PE 3.7.1,
+however this may change. The next version of PE should be able to
+automatically clean up the effects of this module if it is simply
+removed from a Master's classification.
